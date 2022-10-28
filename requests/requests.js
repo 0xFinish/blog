@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export async function getPostsRequest() {
-  const response = await axios.get("http://localhost:3000/api");
+  const response = await axios.get("/api");
   return response.data;
 }
 
