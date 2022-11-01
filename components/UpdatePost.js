@@ -46,8 +46,10 @@ export function UpdatePost(props) {
 
   return (
     <div className="bg-red-300">
+      <p className="text-center font-bold text-xl py-4">Update Post</p>
       <form onSubmit={handleSubmit} className="flex gap-5 flex-col">
         <input
+        className="rounded-md"
           name="title"
           placeholder="Title"
           type="text"
@@ -55,6 +57,7 @@ export function UpdatePost(props) {
           value={formData.title}
         ></input>
         <input
+        className="rounded-md"
           name="author"
           placeholder="Author"
           type="text"
@@ -62,6 +65,7 @@ export function UpdatePost(props) {
           value={formData.author}
         ></input>
         <input
+        className="rounded-md"
           name="date"
           placeholder="Date"
           type="date"
@@ -69,12 +73,13 @@ export function UpdatePost(props) {
           value={formData.date}
         ></input>
         <textarea
+          className="rounded-md"
           name="text"
           placeholder="Blog"
           onChange={handleChange}
           value={formData.text}
         ></textarea>
-        <button className="bg-blue-300 m-2 p-2">Add Post</button>
+        <button className="my-2 p-2 bg-latteWhite rounded-lg">Update Post</button>
       </form>
     </div>
   );

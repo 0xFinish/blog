@@ -10,9 +10,9 @@ export function DropdownPosts() {
   );
 
   return (
-    <Menu className="col-start-5 col-end-6 row-start-2" as="menu">
-      <Menu.Button className="h-10 w-11/12 bg-red-300 rounded-md mx-2">
-        DropdownPosts!!!
+    <Menu className="" as="menu">
+      <Menu.Button className="h-10 w-full bg-red-300 rounded-md mx-2 font-bold text-lg">
+        Posts
       </Menu.Button>
       <Transition
         enter="transition ease-out duration-100"
@@ -22,7 +22,7 @@ export function DropdownPosts() {
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <Menu.Items className="flex flex-col bg-blue-300 rounded-md w-11/12 mx-2 mt-2">
+        <Menu.Items className="flex flex-col bg-blue-300 rounded-md w-full mx-2 mt-2">
           {isSuccess && data.map((val, i) => {
             return (
               <Menu.Item key={i}>

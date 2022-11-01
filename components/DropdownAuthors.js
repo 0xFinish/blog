@@ -10,8 +10,8 @@ export function DropdownAuthors() {
   );
 
   return (
-    <Menu className="col-start-1 col-end-2 row-start-2" as="menu">
-      <Menu.Button className="h-10 w-11/12 bg-red-300 rounded-md mx-2 font-bold">
+    <Menu className="fixed top-0 right-0 w-3/12 flex flex-col justify-center items-center" as="menu">
+      <Menu.Button className="h-10 w-11/12 rounded-md font-bold ">
         Authors
       </Menu.Button>
       <Transition
@@ -22,9 +22,10 @@ export function DropdownAuthors() {
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <Menu.Items className="flex flex-col bg-blue-300 rounded-md w-11/12 mx-2 mt-2">
+        <Menu.Items className="flex flex-col bg-blueLight rounded-md justify-center my-2 divide-y-2 divide-latteWhite">
           {isSuccess && data.map((val, i) => {
             return (
+              <div key={i} className="px-8">
               <Menu.Item key={i}>
                 <Link
                   href={{
@@ -33,7 +34,7 @@ export function DropdownAuthors() {
                 >
                   <p className="font-extrabold p-1 ">{val}</p>
                 </Link>
-              </Menu.Item>
+              </Menu.Item></div>
             );
           })}
           

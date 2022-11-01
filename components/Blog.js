@@ -7,11 +7,11 @@ import { PostList } from "./PostsList"
 
 export function Blog() {
     return(
-        <div className="grid grid-cols-5 gap-4 mb-10">
+        <div className="flex">
             <Navbar></Navbar>
-            <DropdownPosts></DropdownPosts>
+            {/* <DropdownPosts></DropdownPosts> */}
             <PostList></PostList>
-            <DropdownAuthors></DropdownAuthors>
+            {/* <DropdownAuthors></DropdownAuthors> */}
         </div>
     )
 }

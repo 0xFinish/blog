@@ -1,10 +1,10 @@
 import React from "react";
-import { AddNewPostButton } from "./AddNewPostButton";
+// import { AddNewPostButton } from "./AddNewPostButton";
 import { Post } from "./Post";
 import { useQuery } from "@tanstack/react-query";
 import { getPostsRequest } from "../requests/requests";
 
-export function PostList() {
+export function PostsList() {
 
     const { isLoading, isError, isSuccess, data, error } = useQuery(
         ["posts"],
@@ -12,7 +12,7 @@ export function PostList() {
       );
 
   return (
-    <div className="flex flex-col bg-gray-300 rounded-md p-4 col-start-2 col-end-5">
+    <div className="flex col-start-1 col-span-9 flex-col-reverse divide-y-2 divide-y-reverse border-b-2 h-full">
       {isSuccess && data.map((val, i) => (
         <Post
           key={i}
@@ -23,7 +23,7 @@ export function PostList() {
           _id={val._id}
         ></Post>
       ))}
-      <AddNewPostButton></AddNewPostButton>
+      {/* <AddNewPostButton></AddNewPostButton> */}
     </div>
   );
 }
