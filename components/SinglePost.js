@@ -1,6 +1,6 @@
 export function SinglePost(props) {
   return (
-    <div className="flex flex-col pt-4">
+    <div className="flex flex-col pt-4 pr-16">
         <p className="text-2xl font-bold font-title">{props.title}</p>
         <div className="flex flex-row gap-2">
       <p className="font-bold">{props.author}</p>
