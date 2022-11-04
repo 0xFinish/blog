@@ -159,6 +159,7 @@ export default function DetailedPost() {
             <div className="fixed inset-0 bg-black/40" aria-hidden="true" />
             <Dialog.Panel className="p-4 bg-blueLight text-black fixed top-20 right-2/4 translate-x-1/2 rounded-lg w-6/12">
               <UpdatePost
+                setUpdatePost={setUpdatePost}
                 formData={{
                   text: data.data.text,
                   author: data.data.author,

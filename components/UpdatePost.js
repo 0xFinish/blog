@@ -42,6 +42,7 @@ export function UpdatePost(props) {
       date: "",
       text: "",
     });
+    props.setUpdatePost(false)
   }
 
   return (
